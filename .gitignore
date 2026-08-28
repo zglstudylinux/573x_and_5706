@@ -1,0 +1,9 @@
+# 构建产物（可由 build.ps1 重新生成）
+**/Output/
+
+# DSH 会话元数据
+.zcode/
+
+# 系统文件
+Thumbs.db
+desktop.ini

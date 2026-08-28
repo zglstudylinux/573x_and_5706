@@ -1,0 +1,1243 @@
+# depslib dependency file v1.0
+1747364738 source:d:\work\client\573x\sdk\app\3rd-party\i2s\ta5711.c
+	"include.h"
+
+1753703428 d:\work\client\573x\sdk\app\include\include.h
+	"global.h"
+	"xcfg.h"
+	"config.h"
+	"io_def.h"
+	"api.h"
+	"periph.h"
+	"3rd_party.h"
+	"system.h"
+	"modules.h"
+	"load_code.h"
+	"func.h"
+	"os_thread.h"
+	"plugin.h"
+	"res.h"
+	"res_userbin.h"
+	"res2.h"
+
+1747364738 d:\work\client\573x\sdk\app\include\global.h
+	<stddef.h>
+	<stdarg.h>
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+	"typedef.h"
+	"macro.h"
+	"clib.h"
+	"sfr.h"
+	"cpu.h"
+
+1747364738 d:\work\client\573x\sdk\app\include\typedef.h
+
+1747364738 d:\work\client\573x\sdk\app\include\macro.h
+
+1747364738 d:\work\client\573x\sdk\app\include\clib.h
+
+1748592482 d:\work\client\573x\sdk\app\projects\microphone\header\sfr.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\cpu.h
+
+1756293542 d:\work\client\573x\sdk\app\projects\microphone\xcfg.h
+
+1787888555 d:\work\client\573x\sdk\app\projects\microphone\config.h
+	"config_ab5732e_le_mic.h"
+	"config_ab5706a_le_mic.h"
+	"config_ab5712f_le_mic.h"
+	"config_low_latency.h"
+	"config_ab5732e_interphone.h"
+	"config_ab5700_kbox.h"
+	"config_ab5732e_diff_con_vers.h"
+	"config_ab5732e_le_mic.h"
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_ab5732e_le_mic.h
+	"config_define.h"
+	"config_extra.h"
+
+1761187359 d:\work\client\573x\sdk\app\projects\microphone\header\config_define.h
+
+1769583040 d:\work\client\573x\sdk\app\projects\microphone\header\config_extra.h
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_ab5706a_le_mic.h
+	"config_define.h"
+	"config_extra.h"
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_ab5712f_le_mic.h
+	"config_define.h"
+	"config_extra.h"
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_low_latency.h
+	"config_define.h"
+	"config_extra.h"
+
+1768807232 d:\work\client\573x\sdk\app\projects\microphone\config_ab5732e_interphone.h
+	"config_define.h"
+	"config_extra.h"
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_ab5700_kbox.h
+	"config_define.h"
+	"config_extra.h"
+
+1769075279 d:\work\client\573x\sdk\app\projects\microphone\config_ab5732e_diff_con_vers.h
+	"config_define.h"
+	"config_extra.h"
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\header\io_def.h
+	"global.h"
+	"config.h"
+	"sfr.h"
+
+1747638016 d:\work\client\573x\sdk\app\libs\bt8910\api.h
+	"cpu.h"
+	"api_btstack.h"
+	"api_bt.h"
+	"api_ble.h"
+	"api_wireless.h"
+	"api_cm.h"
+	"api_music.h"
+	"api_sd.h"
+	"api_rtc.h"
+	"api_usb.h"
+	"api_fs.h"
+	"api_device.h"
+	"api_sdadc.h"
+	"api_update.h"
+	"api_dac.h"
+	"api_eq.h"
+	"api_pacc.h"
+	"api_sysclk.h"
+	"api_msg.h"
+	"api_saradc.h"
+	"api_sys.h"
+	"api_dump.h"
+	"api_tws.h"
+	"api_pwr.h"
+	"api_key.h"
+	"api_gpio.h"
+	"api_uart.h"
+	"api_math.h"
+	"api_tkey.h"
+	"api_nr.h"
+	"api_sensor.h"
+	"api_irrx.h"
+	"api_charge.h"
+	"api_effects.h"
+	"api_buffer.h"
+	"api_drc.h"
+	"api_alg.h"
+
+1748592482 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_btstack.h
+
+1748592482 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_bt.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_ble.h
+
+1768987950 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_wireless.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_cm.h
+
+1756274397 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_music.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_sd.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_rtc.h
+
+1747638016 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_usb.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_fs.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_device.h
+
+1754619810 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_sdadc.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_update.h
+
+1747627022 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_dac.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_eq.h
+
+1764124631 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_pacc.h
+
+1754900775 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_sysclk.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_msg.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_saradc.h
+
+1750683592 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_sys.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_dump.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_tws.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_pwr.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_key.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_gpio.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_uart.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_math.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_tkey.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_nr.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_sensor.h
+	"include.h"
+	"..\..\platform\3rd-party\sensor\sc7a20.h"
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_irrx.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_charge.h
+
+1747364738 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_effects.h
+
+1748335792 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_buffer.h
+
+1747627022 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_drc.h
+
+1768309740 d:\work\client\573x\sdk\app\libs\bt8910\liba\api_alg.h
+
+1750683592 d:\work\client\573x\sdk\app\projects\microphone\cpu\periph.h
+	"i2c.h"
+	"timer.h"
+	"huart.h"
+	"uart.h"
+	"saradc.h"
+	"port_int.h"
+	"vad.h"
+	"lowpwr.h"
+	"pwm.h"
+	"key/pwrkey.h"
+	"key/adkey.h"
+	"key/tkey.h"
+	"key/irkey.h"
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\i2c.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\timer.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\huart.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\uart.h
+
+1750683592 d:\work\client\573x\sdk\app\projects\microphone\cpu\saradc.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\port_int.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\vad.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\lowpwr.h
+
+1750314414 d:\work\client\573x\sdk\app\projects\microphone\cpu\pwm.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\key\pwrkey.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\key\adkey.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\key\tkey.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\cpu\key\irkey.h
+
+1747364738 d:\work\client\573x\sdk\app\3rd-party\3rd_party.h
+	"./i2s/ta5711.h"
+	"./i2s/wm8978.h"
+	"./sensor/sc7a20.h"
+
+1747364738 d:\work\client\573x\sdk\app\3rd-party\i2s\ta5711.h
+
+1747364738 d:\work\client\573x\sdk\app\3rd-party\i2s\wm8978.h
+
+1747364738 d:\work\client\573x\sdk\app\3rd-party\sensor\sc7a20.h
+
+1762520974 d:\work\client\573x\sdk\app\system\system.h
+	"mute.h"
+	"param.h"
+	"device.h"
+	"vbat.h"
+	"tick.h"
+
+1747364738 d:\work\client\573x\sdk\app\system\mute.h
+
+1762520974 d:\work\client\573x\sdk\app\system\param.h
+
+1747364738 d:\work\client\573x\sdk\app\system\device.h
+
+1747364738 d:\work\client\573x\sdk\app\system\vbat.h
+
+1747364738 d:\work\client\573x\sdk\app\system\tick.h
+
+1768309740 d:\work\client\573x\sdk\app\modules\modules.h
+	"key_scan.h"
+	"audio/mic.h"
+	"audio/audio.h"
+	"audio/mic_mix_mic0.h"
+	"audio/bsp_adc.h"
+	"bluetooth/bluetooth.h"
+	"wireless/wireless.h"
+	"gui/gui.h"
+	"charge/charge.h"
+	"charge/charge_box.h"
+	"warning/warning_play.h"
+	"warning/res_play.h"
+	"record/record.h"
+	"test/iodm.h"
+	"test/qtest.h"
+	"test/vusb_test.h"
+	"usb_device/usb_device.h"
+	"usb_device/usb_audio.h"
+	"usb_device/usb_enum.h"
+	"usb_device/usb_table.h"
+	"effect/effect_idx.h"
+	"effect/mic_effect.h"
+	"debug/offline_log.h"
+	"debug/debug.h"
+	"tool/toolkit.h"
+	"tool/toolkit_effect.h"
+	"tool/dump_buf.h"
+	"voice/howling_dnn.h"
+	"voice/dnn_L1.h"
+	"voice/echo.h"
+	"voice/dnn_L2.h"
+	"voice/magic.h"
+	"voice/dnn_L3.h"
+	"voice/dnn_L3_32k.h"
+	"voice/room_reverb.h"
+	"voice/dnr_fre.h"
+	"voice/user_alg.h"
+	"voice/ylcrn_L1_32k.h"
+	"voice/ains4.h"
+	"gui/led/led.h"
+	"i2s_audio/i2s_audio.h"
+	"i2s_audio/bsp_i2s.h"
+
+1756351490 d:\work\client\573x\sdk\app\modules\key_scan.h
+
+1758075106 d:\work\client\573x\sdk\app\modules\audio\mic.h
+
+1755508701 d:\work\client\573x\sdk\app\modules\audio\audio.h
+	"bsp_aux.h"
+	"bsp_dac.h"
+	"bsp_eq.h"
+	"bsp_audio.h"
+	"dac0_out.h"
+	"dac1_out.h"
+	"mic_eq_drc.h"
+	"mic_mix.h"
+	"soft_gain.h"
+	"src.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\audio\bsp_aux.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\audio\bsp_dac.h
+
+1755329396 d:\work\client\573x\sdk\app\modules\audio\bsp_eq.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\audio\bsp_audio.h
+
+1747389884 d:\work\client\573x\sdk\app\modules\audio\dac0_out.h
+
+1747389884 d:\work\client\573x\sdk\app\modules\audio\dac1_out.h
+
+1755505122 d:\work\client\573x\sdk\app\modules\audio\mic_eq_drc.h
+
+1747627022 d:\work\client\573x\sdk\app\modules\audio\mic_mix.h
+
+1768384440 d:\work\client\573x\sdk\app\modules\audio\soft_gain.h
+
+1768995527 d:\work\client\573x\sdk\app\modules\audio\src.h
+
+1766731623 d:\work\client\573x\sdk\app\modules\audio\mic_mix_mic0.h
+
+1765767228 d:\work\client\573x\sdk\app\modules\audio\bsp_adc.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\bluetooth.h
+	"tws/tws.h"
+	"ble/popup.h"
+	"bsp_bt.h"
+	"app/app.h"
+	"bt/pbap.h"
+
+1747389884 d:\work\client\573x\sdk\app\modules\bluetooth\tws\tws.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\ble\popup.h
+	"gfps.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\gfps\gfps.h
+	"include.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\bsp_bt.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\app.h
+	"ab_mate/ab_mate_app.h"
+	"app_demo/app_demo.h"
+	"ab_mate/ab_mate_app.h"
+	"app_fota/app_fota.h"
+	"app_fota/app_fota_profile.h"
+
+1747389884 d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_app.h
+	"ab_mate_timer.h"
+	"ab_mate_profile.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_timer.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_profile.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\app_demo\app_demo.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\app_fota\app_fota.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\app_fota\app_fota_profile.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\bt\pbap.h
+
+1768807232 d:\work\client\573x\sdk\app\modules\wireless\wireless.h
+	"wireless_link_list.h"
+	"wireless_txrx.h"
+	"wireless_proc.h"
+	"wireless_cmd.h"
+	"wireless_pwr_ctr.h"
+
+1768309740 d:\work\client\573x\sdk\app\modules\wireless\wireless_link_list.h
+
+1747389884 d:\work\client\573x\sdk\app\modules\wireless\wireless_txrx.h
+
+1768987950 d:\work\client\573x\sdk\app\modules\wireless\wireless_proc.h
+
+1769002036 d:\work\client\573x\sdk\app\modules\wireless\wireless_cmd.h
+
+1747389884 d:\work\client\573x\sdk\app\modules\wireless\wireless_pwr_ctr.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\gui\gui.h
+	"ledseg/ledseg_common.h"
+	"ledseg/display_ledseg.h"
+	"led/led.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_common.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\display\ledseg\display_ledseg.h
+	"ledseg/ledseg_7p7s.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_7p7s.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\gui\led\led.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\charge\charge.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\charge\charge_box.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\warning\warning_play.h
+	"piano.h"
+	"wsbc.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\warning\piano.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\warning\wsbc.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\warning\res_play.h
+	"res_tbl.h"
+
+1747389884 d:\work\client\573x\sdk\app\modules\warning\res_tbl.h
+	"config.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\record\record.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\test\iodm.h
+
+1756293542 d:\work\client\573x\sdk\app\modules\test\qtest.h
+
+1756293542 d:\work\client\573x\sdk\app\modules\test\vusb_test.h
+
+1747627022 d:\work\client\573x\sdk\app\modules\usb_device\usb_device.h
+
+1747638016 d:\work\client\573x\sdk\app\modules\usb_device\usb_audio.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\usb_device\usb_enum.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\usb_device\usb_table.h
+
+1755505122 d:\work\client\573x\sdk\app\modules\effect\effect_idx.h
+
+1755505122 d:\work\client\573x\sdk\app\modules\effect\mic_effect.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\debug\offline_log.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\debug\debug.h
+
+1763986326 d:\work\client\573x\sdk\app\modules\tool\toolkit.h
+	"toolkit_effect.h"
+
+1755505122 d:\work\client\573x\sdk\app\modules\tool\toolkit_effect.h
+
+1748350029 d:\work\client\573x\sdk\app\modules\tool\dump_buf.h
+
+1747638016 d:\work\client\573x\sdk\app\modules\voice\howling_dnn.h
+
+1747638016 d:\work\client\573x\sdk\app\modules\voice\dnn_l1.h
+
+1747638016 d:\work\client\573x\sdk\app\modules\voice\echo.h
+
+1748335792 d:\work\client\573x\sdk\app\modules\voice\dnn_l2.h
+
+1748418299 d:\work\client\573x\sdk\app\modules\voice\magic.h
+
+1749195419 d:\work\client\573x\sdk\app\modules\voice\dnn_l3.h
+
+1751708169 d:\work\client\573x\sdk\app\modules\voice\dnn_l3_32k.h
+
+1761212803 d:\work\client\573x\sdk\app\modules\voice\room_reverb.h
+
+1764594717 d:\work\client\573x\sdk\app\modules\voice\dnr_fre.h
+
+1766477262 d:\work\client\573x\sdk\app\modules\voice\user_alg.h
+
+1768995527 d:\work\client\573x\sdk\app\modules\voice\ylcrn_l1_32k.h
+
+1768309740 d:\work\client\573x\sdk\app\modules\voice\ains4.h
+
+1761983732 d:\work\client\573x\sdk\app\modules\i2s_audio\i2s_audio.h
+	"bsp_i2s.h"
+
+1761187359 d:\work\client\573x\sdk\app\modules\i2s_audio\bsp_i2s.h
+
+1755500525 d:\work\client\573x\sdk\app\projects\microphone\load_code.h
+
+1756776576 d:\work\client\573x\sdk\app\functions\func.h
+	"func_adapter.h"
+	"func_device.h"
+	"func_bt.h"
+	"func_bt_dut.h"
+	"func_idle.h"
+	"func_lowpwr.h"
+	"func_update.h"
+
+1768987950 d:\work\client\573x\sdk\app\functions\func_adapter.h
+
+1756776576 d:\work\client\573x\sdk\app\functions\func_device.h
+
+1747389884 d:\work\client\573x\sdk\app\functions\func_bt.h
+
+1747364738 d:\work\client\573x\sdk\app\functions\func_bt_dut.h
+
+1747364738 d:\work\client\573x\sdk\app\functions\func_idle.h
+
+1747364738 d:\work\client\573x\sdk\app\functions\func_lowpwr.h
+
+1747364738 d:\work\client\573x\sdk\app\functions\func_update.h
+
+1768309740 d:\work\client\573x\sdk\app\os\os_thread.h
+	"decoder_prio_trans.h"
+	"encoder_prio_trans.h"
+	"alg_prio_trans.h"
+
+1747389884 d:\work\client\573x\sdk\app\os\decoder_prio_trans.h
+
+1747389884 d:\work\client\573x\sdk\app\os\encoder_prio_trans.h
+
+1747389884 d:\work\client\573x\sdk\app\os\alg_prio_trans.h
+
+1755329396 d:\work\client\573x\sdk\app\projects\microphone\plugin\plugin.h
+	"multi_lang.h"
+	"port_aux.h"
+	"port_led.h"
+	"port_sd.h"
+	"port_tkey.h"
+	"bt_call.h"
+	"effect.h"
+	"effect_table.h"
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\plugin\multi_lang.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\port\port_aux.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\port\port_led.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\port\port_sd.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\port\port_tkey.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\plugin\bt_call.h
+
+1748416891 d:\work\client\573x\sdk\app\projects\microphone\effect.h
+
+1755505122 d:\work\client\573x\sdk\app\projects\microphone\plugin\effect_table.h
+
+1753703187 d:\work\client\573x\sdk\app\projects\microphone\res.h
+
+1747364738 d:\work\client\573x\sdk\app\projects\microphone\res2.h
+
+1747364738 source:d:\work\client\573x\sdk\app\3rd-party\i2s\wm8978.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\3rd-party\sensor\sc7a20.c
+	"include.h"
+	"sc7a20.h"
+
+1756776576 source:d:\work\client\573x\sdk\app\functions\func.c
+	"include.h"
+	"func.h"
+
+1768987950 source:d:\work\client\573x\sdk\app\functions\func_adapter.c
+	"include.h"
+	"func.h"
+	"func_adapter.h"
+
+1756351490 source:d:\work\client\573x\sdk\app\functions\func_bt.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1748069511 source:d:\work\client\573x\sdk\app\functions\func_bt_dut.c
+	"include.h"
+	"func.h"
+	"api.h"
+
+1747627022 source:d:\work\client\573x\sdk\app\functions\func_charge.c
+	"include.h"
+	"func.h"
+
+1768807232 source:d:\work\client\573x\sdk\app\functions\func_device.c
+	"include.h"
+	"func.h"
+	"func_device.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\functions\func_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\functions\func_lowpwr.c
+	"include.h"
+	"func.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\functions\func_update.c
+	"include.h"
+	"func.h"
+	"func_update.h"
+
+1758089384 source:d:\work\client\573x\sdk\app\functions\sfunc_bt_call.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\functions\sfunc_bt_ota.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\functions\sfunc_bt_ring.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1755322962 source:d:\work\client\573x\sdk\app\functions\sfunc_sleep.c
+	"include.h"
+	"func.h"
+
+1749086773 source:d:\work\client\573x\sdk\app\libs\bt8910\liba\strong_bt.c
+	"include.h"
+
+1768987950 source:d:\work\client\573x\sdk\app\libs\bt8910\liba\strong_le.c
+	"include.h"
+
+1758089384 source:d:\work\client\573x\sdk\app\libs\bt8910\liba\strong_sco.c
+	"include.h"
+
+1761802969 source:d:\work\client\573x\sdk\app\libs\bt8910\liba\strong_symbol.c
+	"include.h"
+
+1758089384 source:d:\work\client\573x\sdk\app\libs\bt8910\liba\strong_tws.c
+	"include.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\modules\audio\bsp_adc.c
+	"include.h"
+	"bsp_adc.h"
+
+1754619810 source:d:\work\client\573x\sdk\app\modules\audio\bsp_audio.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\audio\bsp_aux.c
+	"include.h"
+
+1755329396 source:d:\work\client\573x\sdk\app\modules\audio\bsp_dac.c
+	"include.h"
+	"bsp_dac.h"
+
+1755329396 source:d:\work\client\573x\sdk\app\modules\audio\bsp_eq.c
+	"include.h"
+	"bsp_eq.h"
+
+1765372266 source:d:\work\client\573x\sdk\app\modules\audio\dac0_out.c
+	"include.h"
+	"dac0_out.h"
+
+1755498456 source:d:\work\client\573x\sdk\app\modules\audio\dac1_out.c
+	"include.h"
+	"dac1_out.h"
+
+1766483031 source:d:\work\client\573x\sdk\app\modules\audio\mic.c
+	"include.h"
+
+1768393823 source:d:\work\client\573x\sdk\app\modules\audio\mic_eq_drc.c
+	"include.h"
+	"mic_eq_drc.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\modules\audio\mic_mix_mic0.c
+	"include.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\modules\audio\soft_gain.c
+	"include.h"
+	"soft_gain.h"
+
+1769246209 source:d:\work\client\573x\sdk\app\modules\audio\src.c
+	"include.h"
+	"src.h"
+
+1748951074 source:d:\work\client\573x\sdk\app\modules\audio\test_data_sin1k.c
+	"include.h"
+
+1749107905 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_app.c
+	"include.h"
+	"ab_mate_app.h"
+	"ab_mate_timer.h"
+	"ab_mate_ota.h"
+	"ab_mate_tws.h"
+	"ab_mate_profile.h"
+	"record.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_ota.h
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_tws.h
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_gfps_profile.c
+	"include.h"
+	"ab_mate_profile.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_ota.c
+	"include.h"
+	"ab_mate_ota.h"
+	"ab_mate_tws.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_profile.c
+	"include.h"
+	"ab_mate_profile.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_timer.c
+	"include.h"
+	"ab_mate_timer.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\ab_mate\ab_mate_tws.c
+	"include.h"
+	"ab_mate_tws.h"
+	"ab_mate_ota.h"
+	"ab_mate_timer.h"
+	"ab_mate_profile.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\app_demo\app_demo.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\app_fota\app_fota.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\app_interface.c
+	"include.h"
+	"app.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\modules\bluetooth\app\app_test\app_test.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\ble\adv0.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\ble\ble.c
+	"include.h"
+
+1754397811 source:d:\work\client\573x\sdk\app\modules\bluetooth\bsp_bt.c
+	"include.h"
+	"api.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\a2dp.c
+	"include.h"
+	"api.h"
+
+1758089384 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\bt.c
+	"include.h"
+	"api.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\bt_att.c
+	"include.h"
+	"api.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\dev_vol.c
+	"include.h"
+	"api.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\hfhs.c
+	"include.h"
+	"api.h"
+
+1749107905 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\hid.c
+	"include.h"
+	"api.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\id3_tag.c
+	"id3_tag.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\bt\id3_tag.h
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\map.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\pbap.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\profile.c
+	"include.h"
+	"api.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\modules\bluetooth\bt\spp.c
+	"include.h"
+	"api.h"
+
+1758089384 source:d:\work\client\573x\sdk\app\modules\bluetooth\call\bt_sco.c
+	"include.h"
+	"bt_sco.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\bluetooth\call\bt_sco.h
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\gfps\gfps.c
+	"include.h"
+	"gfps.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\bluetooth\gfps\gfps_util.c
+	"include.h"
+
+1757504075 source:d:\work\client\573x\sdk\app\modules\bluetooth\rf_ctrl.c
+	"include.h"
+	"api.h"
+
+1756293542 source:d:\work\client\573x\sdk\app\modules\charge\charge.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\charge\charge_box.c
+	"include.h"
+
+1755696004 source:d:\work\client\573x\sdk\app\modules\codec\lc3s.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\debug\debug.c
+	"include.h"
+	"debug.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\debug\offline_log.c
+	"include.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\modules\effect\mic_effect.c
+	"include.h"
+	"effect_idx.h"
+	"mic_effect.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\modules\gui\gui.c
+	"include.h"
+	"gui.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\gui\led\led.c
+	"include.h"
+	"led.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_6c6s.c
+	"include.h"
+	"ledseg_6c6s.h"
+
+1747364738 d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_6c6s.h
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_7p7s.c
+	"include.h"
+	"ledseg_common.h"
+	"ledseg_7p7s.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\gui\ledseg\ledseg_common.c
+	"include.h"
+	"ledseg_common.h"
+	"ledseg_7p7s.h"
+
+1761802969 source:d:\work\client\573x\sdk\app\modules\i2s_audio\bsp_i2s.c
+	"include.h"
+	"bsp_i2s.h"
+	"../../os/os_thread.h"
+
+1761988368 source:d:\work\client\573x\sdk\app\modules\i2s_audio\i2s_audio_in.c
+	"include.h"
+	"i2s_audio.h"
+
+1761988368 source:d:\work\client\573x\sdk\app\modules\i2s_audio\i2s_audio_in_out.c
+	"include.h"
+	"i2s_audio.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\key_scan.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\record\record.c
+	"include.h"
+
+1749107905 source:d:\work\client\573x\sdk\app\modules\test\enc_test.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\test\iodm.c
+	"include.h"
+
+1749107905 source:d:\work\client\573x\sdk\app\modules\test\qtest.c
+	"include.h"
+
+1756293542 source:d:\work\client\573x\sdk\app\modules\test\vusb_test.c
+	"include.h"
+	"vusb_test.h"
+
+1748350029 source:d:\work\client\573x\sdk\app\modules\tool\dump_buf.c
+	"include.h"
+
+1763986326 source:d:\work\client\573x\sdk\app\modules\tool\toolkit.c
+	"include.h"
+	"toolkit.h"
+
+1763986326 source:d:\work\client\573x\sdk\app\modules\tool\toolkit_effect.c
+	"include.h"
+	"toolkit_effect.h"
+
+1755500525 source:d:\work\client\573x\sdk\app\modules\usb_device\usb_audio.c
+
+1755500525 source:d:\work\client\573x\sdk\app\modules\usb_device\usb_device.c
+	"include.h"
+	"usb_device.h"
+
+1755500525 source:d:\work\client\573x\sdk\app\modules\usb_device\usb_enum.c
+	"include.h"
+	"usb_enum.h"
+	"usb_table.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\usb_device\usb_table.c
+	"include.h"
+	"usb_table.h"
+	"usb_enum.h"
+
+1768309740 source:d:\work\client\573x\sdk\app\modules\voice\ains4.c
+	"include.h"
+	"api_alg.h"
+	"ains4.h"
+
+1747638016 source:d:\work\client\573x\sdk\app\modules\voice\dnn_l1.c
+	"include.h"
+	"api_alg.h"
+	"dnn_L1.h"
+
+1755656202 source:d:\work\client\573x\sdk\app\modules\voice\dnn_l2.c
+	"include.h"
+	"api_alg.h"
+	"dnn_L2.h"
+
+1755656202 source:d:\work\client\573x\sdk\app\modules\voice\dnn_l3.c
+	"include.h"
+	"api_alg.h"
+	"dnn_L3.h"
+
+1755656202 source:d:\work\client\573x\sdk\app\modules\voice\dnn_l3_32k.c
+	"include.h"
+	"api_alg.h"
+	"dnn_L3_32k.h"
+
+1764594717 source:d:\work\client\573x\sdk\app\modules\voice\dnr_fre.c
+	"include.h"
+	"api_alg.h"
+	"dnr_fre.h"
+
+1748400474 source:d:\work\client\573x\sdk\app\modules\voice\echo.c
+	"include.h"
+	"echo.h"
+
+1747638016 source:d:\work\client\573x\sdk\app\modules\voice\howling_dnn.c
+	"include.h"
+	"api_alg.h"
+	"howling_dnn.h"
+
+1756730717 source:d:\work\client\573x\sdk\app\modules\voice\magic.c
+	"include.h"
+	"magic.h"
+	"api_alg.h"
+
+1761212803 source:d:\work\client\573x\sdk\app\modules\voice\room_reverb.c
+	"include.h"
+	"room_reverb.h"
+	"api_alg.h"
+
+1766477262 source:d:\work\client\573x\sdk\app\modules\voice\user_alg.c
+	"include.h"
+	"api_alg.h"
+	"user_alg.h"
+
+1769246209 source:d:\work\client\573x\sdk\app\modules\voice\ylcrn_l1_32k.c
+	"include.h"
+	"api_alg.h"
+	"ylcrn_L1_32k.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\warning\piano.c
+	"include.h"
+	"res_play.h"
+
+1769246209 source:d:\work\client\573x\sdk\app\modules\warning\res_play.c
+	"include.h"
+	"res_play.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\warning\res_tbl.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\warning\warning_play.c
+	"include.h"
+	"warning_play.h"
+	"res_play.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\modules\warning\wsbc.c
+	"include.h"
+	"wsbc.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\modules\wireless\mic_proc.c
+	"include.h"
+	"wireless.h"
+
+1769519766 source:d:\work\client\573x\sdk\app\modules\wireless\wireless.c
+	"include.h"
+	"api.h"
+
+1768207672 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_cmd.c
+	"include.h"
+	"wireless.h"
+
+1769002036 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_cmd_api.c
+	"include.h"
+	"wireless_cmd.h"
+
+1749546663 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_dump.c
+	"include.h"
+	"api.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_link_list.c
+	"include.h"
+	"wireless_link_list.h"
+
+1768807232 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_proc.c
+	"include.h"
+	"wireless.h"
+
+1768207672 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_pwr_ctr.c
+	"include.h"
+	"wireless_pwr_ctr.h"
+
+1768807232 source:d:\work\client\573x\sdk\app\modules\wireless\wireless_txrx_single.c
+	"include.h"
+	"wireless_txrx.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\os\alg_prio_trans.c
+	"include.h"
+	"alg_prio_trans.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\os\decoder_prio_trans.c
+	"include.h"
+	"decoder_prio_trans.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\os\encoder_prio_trans.c
+	"include.h"
+	"encoder_prio_trans.h"
+
+1768309740 source:d:\work\client\573x\sdk\app\os\thread_alg.c
+	"include.h"
+	"os_thread.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\os\thread_dec.c
+	"include.h"
+	"os_thread.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\os\thread_enc.c
+	"include.h"
+	"os_thread.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\system\cm.c
+	"include.h"
+
+1755500525 source:d:\work\client\573x\sdk\app\system\device.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\system\mute.c
+	"include.h"
+
+1762520974 source:d:\work\client\573x\sdk\app\system\param.c
+	"include.h"
+
+1756293542 source:d:\work\client\573x\sdk\app\system\system.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\system\vbat.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\display\display_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1749086024 source:d:\work\client\573x\sdk\app\projects\display\ledseg\display_ledseg.c
+	"include.h"
+	"ledseg/display_ledseg.h"
+
+1762520974 source:d:\work\client\573x\sdk\app\projects\message\msg_adapter.c
+	"include.h"
+	"func.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\projects\message\msg_bt.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1768995527 source:d:\work\client\573x\sdk\app\projects\message\msg_device.c
+	"include.h"
+	"func.h"
+	"func_device.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\message\msg_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\projects\microphone\config.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\charge.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\gpio.c
+	"include.h"
+
+1756293542 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\huart.c
+	"include.h"
+	"api.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\i2c.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\key\adkey.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\key\irkey.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\key\knob.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\key\pwrkey.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\key\tkey.c
+	"include.h"
+	"api.h"
+
+1756293542 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\lowpwr.c
+	"include.h"
+	"func.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\port_int.c
+	"include.h"
+
+1750314414 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\pwm.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\rtc.c
+	"include.h"
+
+1750683592 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\saradc.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\timer.c
+	"include.h"
+
+1750683592 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\tsen.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\uart.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\uart0.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\cpu\vad.c
+	"include.h"
+
+1748416891 source:d:\work\client\573x\sdk\app\projects\microphone\effect.c
+	"include.h"
+	"effect.h"
+
+1749043256 source:d:\work\client\573x\sdk\app\projects\microphone\interrupt.c
+	"include.h"
+
+1768807232 source:d:\work\client\573x\sdk\app\projects\microphone\load_code.c
+	"include.h"
+	"load_code.h"
+
+1747627022 source:d:\work\client\573x\sdk\app\projects\microphone\main.c
+	"include.h"
+
+1753706177 source:d:\work\client\573x\sdk\app\projects\microphone\output\bin\app.xm
+	"config.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\output\bin\download.xm
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\output\bin\res.xm
+
+1756293542 source:d:\work\client\573x\sdk\app\projects\microphone\output\bin\xcfg.xm
+
+1748069511 source:d:\work\client\573x\sdk\app\projects\microphone\plugin\bt_call.c
+	"include.h"
+
+1755505122 source:d:\work\client\573x\sdk\app\projects\microphone\plugin\effect_table.c
+	"include.h"
+
+1748416891 source:d:\work\client\573x\sdk\app\projects\microphone\plugin\eq_table.c
+	"include.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\projects\microphone\plugin\multi_lang.c
+	"include.h"
+
+1750683592 source:d:\work\client\573x\sdk\app\projects\microphone\plugin\plugin.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_aux.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_ir.c
+	"include.h"
+
+1768384440 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_key.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_led.c
+	"include.h"
+	"led.h"
+
+1749086024 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_ledseg.c
+	"include.h"
+
+1747389884 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_sd.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_tkey.c
+	"include.h"
+
+1747364738 source:d:\work\client\573x\sdk\app\projects\microphone\port\port_update.c
+	"include.h"
+
+1769246209 source:d:\work\client\573x\sdk\app\projects\microphone\ram.ld
+	"config.h"
+
