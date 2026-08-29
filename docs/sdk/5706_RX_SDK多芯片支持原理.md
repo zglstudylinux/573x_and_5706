@@ -1,6 +1,6 @@
 # 5706_RX SDK 多芯片支持原理
 
-> 解释：`5706_RX/` 这一套 SDK 为什么能支持 AB5706A、AB5732E、AB5666、AB5766、AB570X 等多种芯片/角色。
+> 解释：`5706_RX/` 这一套 SDK 为什么能支持 AB5706A、AB5732E、AB5666、AB5766、AB570X 等多种芯片，以及既能做发送端（TX）又能做接收端（RX）两种角色。
 >
 > 所有调用/包含关系均来自实际代码，标注「文件 + 行号」。配套：
 > - [`两个SDK差异对比.md`](两个SDK差异对比.md)
@@ -24,6 +24,8 @@
 | `CONFIG_AB5766_LE_MIC_RX` | 7 | `config_ab5766_rx.h` | 接收端 |
 
 关键：**这些芯片/角色共用同一套 `sfr.h` 寄存器映射 + 同一套预编译库**，差异只在各自 `config_ab*.h` 里的宏。
+
+> 注意：这套 SDK **既能做 TX 也能做 RX**（目录名「RX」只是本项目的用法）。上表有 3 个 TX 配置：`config_ab5706a_tx.h`、`config_ab570x_tx.h`、`config_low_latency_tx.h`。它们与 RX 配置的唯一区别就是 `FUNC_DEVICE_EN`/`FUNC_ADAPTER_EN` 取值相反（TX 为 1/0，RX 为 0/1），角色由 3.7 节的 `WIRELESS_MIC_ROLE` 机制派生。
 
 ---
 
@@ -177,9 +179,24 @@ flowchart LR
 `5706_RX/include/config_extra.h`（config_ab*.h 最后 `#include` 它）：
 
 - L8：`#define SDK_VERSION 0x0150`
+- **L581-589：角色派生** —— 由 `FUNC_DEVICE_EN` + `FUNC_ADAPTER_EN` 派生 `WIRELESS_MIC_ROLE`：
+  ```c
+  #if FUNC_ADAPTER_EN && FUNC_DEVICE_EN
+      #define WIRELESS_MIC_ROLE  2    // 0=TX, 1=RX, 2=收发一体（运行期配置选择）
+  #elif FUNC_ADAPTER_EN
+      #define WIRELESS_MIC_ROLE  1    // 只做接收端 RX
+  #elif FUNC_DEVICE_EN
+      #define WIRELESS_MIC_ROLE  0    // 只做发送端 TX
+  #else
+      #define WIRELESS_MIC_ROLE  0xff // 都不支持
+  #endif
+  ```
+  随后 L591-596 据此派生有效使能位 `ADAPTER_EN`/`DEVICE_EN`。
 - L626-629：由采样率派生 `FRAME_SIZE_MIN`、`WIRELESS_MIC_DFU_TX_INTERVAL`
 - L631-642：由 `WIRELESS_MIC_TX_INTERVAL` 派生 `WIRELESS_CON_INTERVAL`（12/60/64）
 - L648-666：`#if WIRELESS_MIC_TX_INTERVAL == 0 → #error`、非法组合 `#error "not allowed!"`
+
+`WIRELESS_MIC_ROLE` 在 `5706_RX/modules/wireless/wireless_proc.c` L312-316 的 `wireless_mic_role_init()` 中决定 `cfg_wireless_role`（ROLE==0 固定 TX、==1 固定 RX、==2 运行期按 xcfg 选）。**即 AB5700 SDK 同样具备「收发一体 + 运行期切换」能力，只是出厂 config 每个只开一个角色（ROLE=0/1），未启用 ROLE==2。**
 
 作用：把「配置是否合法」提前到编译期报错，而不是运行时才发现。
 
@@ -239,7 +256,7 @@ flowchart TD
 
 ## 六、新手快速上手
 
-1. **换芯片**：改 `config.h` L20 的 `USER_CONFIG`，再确认对应 `config_ab*.h` 里 `FLASH_SIZE / FLASH_CODE_SIZE / *_MAPPING / 无线参数` 是否匹配你的硬件。
+1. **换芯片/换角色**：改 `config.h` L20 的 `USER_CONFIG`，再确认对应 `config_ab*.h` 里 `FLASH_SIZE / FLASH_CODE_SIZE / *_MAPPING / 无线参数` 是否匹配硬件；做 TX 还是 RX 由该 config 的 `FUNC_DEVICE_EN`/`FUNC_ADAPTER_EN` 决定（出厂 config 都是二者开一）。
 2. **加一个新芯片**：复制一份现有 `config_ab*.h` 改名，在 `config.h` 增加枚举 + `#elif` 分支，改宏即可（寄存器/库不动）。
 3. **编译**：
    ```powershell

@@ -1,8 +1,8 @@
 # 两个 SDK 差异对比（5706_RX vs 5726_TX）
 
 > 本文件对比本仓库中的两套 JieLi 无线麦 SDK：
-> - `5706_RX/`：接收端 SDK（CPU 平台 **AB5700**）
-> - `5726_TX/`：发送端 SDK（CPU 平台 **BT8910**）
+> - `5706_RX/`：CPU 平台 **AB5700**（目录名「RX」只是本项目的接收端用法，SDK 本身收发都支持）
+> - `5726_TX/`：CPU 平台 **BT8910**（目录名「TX」只是本项目的发送端用法，SDK 本身收发都支持）
 >
 > 所有结论均来自实际代码，标注了「文件 + 行号」。配套阅读：
 > - [`5706_RX_SDK多芯片支持原理.md`](5706_RX_SDK多芯片支持原理.md)
@@ -12,7 +12,7 @@
 
 ## 一句话结论
 
-两套 SDK 同属 JieLi 无线麦 SDK 家族，代码风格一致，但**目标 CPU 平台不同**：`5706_RX` 基于 **AB5700** 平台，`5726_TX` 基于 **BT8910** 平台。平台不同，导致寄存器映射（`sfr.h`）、预编译库（`.a`）、目录组织、角色选择方式都不一样；但「一个 SDK 支持多种芯片」的机制是相同的（见另外两份文档）。
+两套 SDK 同属 JieLi 无线麦 SDK 家族，代码风格一致，但**目标 CPU 平台不同**：`5706_RX` 基于 **AB5700** 平台，`5726_TX` 基于 **BT8910** 平台。平台不同，导致寄存器映射（`sfr.h`）、预编译库（`.a`）、目录组织都不一样；但「一个 SDK 支持多种芯片」的机制、以及「收发角色机制（`WIRELESS_MIC_ROLE`）」是**相同**的，差异只在出厂 config 怎么选（见第 4 节与另外两份文档）。
 
 平台标识来自各自的 `cpu.h`：
 
@@ -34,7 +34,8 @@
 | 预编译库路径 | `libs/*.a` | `libs/bt8910/liba/*.a` | 同上 |
 | 平台头文件位置 | `include/`（sfr/io_def/config_define/config_extra） | `projects/microphone/header/` | `build.ps1` L149 / L148 |
 | 外设驱动位置 | 根目录 `bsp/`（`bsp.h` 引入） | `projects/microphone/cpu/`（`periph.h` 引入） | `include/include.h` L15 / L14 |
-| 角色选择方式 | 编译期固定为接收端 | 收发一体，运行期由 xcfg 切换 | `config_ab5706a_rx.h` L15-16 / `config_ab5706a_le_mic.h` L17-18 |
+| 角色选择机制 | 相同（`FUNC_*_EN` → `WIRELESS_MIC_ROLE` 0/1/2） | 相同 | `include/config_extra.h` L581-589 / `header/config_extra.h` L729-737 |
+| 出厂 config 的角色选择 | 每个 config 只开一个角色（编译期固定 TX 或 RX） | 所有 config 都 both=1（运行期 xcfg 选） | `config_ab5706a_rx.h` L15-16、`config_ab5706a_tx.h` L15-16 / `config_ab5706a_le_mic.h` L17-18 |
 | Flash 下限 | 支持 256K（`FSIZE_256K`） | 最低 512K（无 `FSIZE_256K`） | `config_ab5706a_rx.h` L38 / `config_ab5706a_le_mic.h` L55 |
 | 蓝牙功能 | 关（`FUNC_BT_EN 0`），代码被裁剪 | 开（`FUNC_BT_EN 1`），含完整 BT 栈 | `config_ab5706a_rx.h` L17 / `config_ab5706a_le_mic.h` L16 |
 | 编解码枚举 index 5 | `WS_CODEC_USER0` | `WS_CODEC_LC3F`（LC3 5ms） | `include/config_define.h` L436 vs `header/config_define.h` L403 |
@@ -71,26 +72,47 @@
 - RX：根目录 `bsp/`，通过 `include/include.h` L15 `#include "bsp.h"` 引入。
 - TX：`projects/microphone/cpu/`（`periph.h`、`gpio.c`、`uart0.c`、`i2c.c`、`saradc.c`…），通过 `include/include.h` L14 `#include "periph.h"` 引入。
 
-### 4. 角色（发送端/接收端）选择方式不同（关键）
+### 4. 收发角色机制相同，差异只在出厂配置（关键）
 
-- **RX 是「单接收端」**：`config_ab5706a_rx.h` L15-16
-  ```c
-  #define FUNC_DEVICE_EN   0   // 发射器功能关
-  #define FUNC_ADAPTER_EN  1   // 接收器功能开
-  ```
-  编译期就把发射端代码裁掉，只能做接收端。
+两套 SDK 的收发角色机制**完全相同**：用 `FUNC_DEVICE_EN` + `FUNC_ADAPTER_EN` 在 `config_extra.h` 里派生 `WIRELESS_MIC_ROLE`：
 
-- **TX 是「收发一体」**：`config_ab5706a_le_mic.h` L17-18 两个都开：
-  ```c
-  #define FUNC_DEVICE_EN   1
-  #define FUNC_ADAPTER_EN  1
-  ```
-  运行时再决定角色，依据是配置工具写入的 xcfg 位 `wireless_adapter_en`：
-  - `xcfg.h` L71 `u32 wireless_adapter_en : 1;`
-  - `modules/wireless/wireless_proc.c` L323-336 `wireless_mic_role_init()` 读它并赋值 `cfg_wireless_role`
-  - `libs/bt8910/liba/api_wireless.h` L115 `#define wireless_role_is_adapter() cfg_wireless_role`
+```c
+// RX include/config_extra.h L581-589 / TX header/config_extra.h L729-737（逻辑逐字一致）
+#if FUNC_ADAPTER_EN && FUNC_DEVICE_EN
+    #define WIRELESS_MIC_ROLE  2    // 0=TX, 1=RX, 2=收发一体（运行期配置选择）
+#elif FUNC_ADAPTER_EN
+    #define WIRELESS_MIC_ROLE  1    // 只做接收端 RX
+#elif FUNC_DEVICE_EN
+    #define WIRELESS_MIC_ROLE  0    // 只做发送端 TX
+#else
+    #define WIRELESS_MIC_ROLE  0xff // 都不支持
+#endif
+```
 
-  因此同一份 TX 固件，烧录时选 `wireless_mic_emit` 档 = 发送端，选 `wireless_adapter` 档 = 接收端。
+`wireless_mic_role_init()` 再按 ROLE 决定 `cfg_wireless_role`（RX `wireless_proc.c` L312-316、TX L323-339）：
+
+```c
+#if WIRELESS_MIC_ROLE == 0      cfg_wireless_role = false;  // 固定 TX
+#elif WIRELESS_MIC_ROLE == 1    cfg_wireless_role = true;   // 固定 RX
+#elif WIRELESS_MIC_ROLE == 2
+    if (xcfg_cb.wireless_adapter_en)      cfg_wireless_role = true;   // RX
+    else if (xcfg_cb.wireless_device_en)  cfg_wireless_role = false;  // TX
+    else                                  cfg_wireless_role = false;  // 默认 TX
+#endif
+```
+
+**真正区别在出厂 config 怎么设：**
+
+- **AB5700 SDK（5706_RX）**：每个 config 只开一个角色 → ROLE=0 或 1（编译期固定）。
+  - RX 配置：`config_ab5706a_rx.h` L15-16 `FUNC_DEVICE_EN 0`、`FUNC_ADAPTER_EN 1`
+  - TX 配置（存在！）：`config_ab5706a_tx.h` L15-16 `FUNC_DEVICE_EN 1`、`FUNC_ADAPTER_EN 0`；`config_ab570x_tx.h` L15-16、`config_low_latency_tx.h` L16-17 同
+  - 所以 `5706_RX/` 目录既能做 RX 也能做 TX，只是把 `config.h` 的 `USER_CONFIG` 选到对应 `_tx.h` 配置即可。
+
+- **BT8910 SDK（5726_TX）**：所有 config 都 both=1 → ROLE=2（运行期 xcfg 选）。
+  - `config_ab5706a_le_mic.h` L17-18 两个都开。
+  - 运行期依据 `xcfg.h` L71 `u32 wireless_adapter_en : 1;`、L72 `u32 wireless_device_en : 1;`（烧录时配置工具写入）。
+
+因此：同一份 TX 固件，烧 `wireless_mic_emit` 档 = 发送端、`wireless_adapter` 档 = 接收端，无需重编译；而 RX SDK 要换角色则改 config 重编译。
 
 ### 5. 其它功能面差异
 
@@ -128,6 +150,6 @@ flowchart LR
 
 2. **平台库 `.a`**：芯片底层的硬件驱动、协议栈、编解码器以预编译静态库形式提供，一套库对应一个平台；同一平台的所有芯片共用这套库（这就是「一个 SDK 支持多芯片」的硬件底座，详见多芯片原理文档）。
 
-3. **收发一体 vs 单接收端**：`FUNC_DEVICE_EN / FUNC_ADAPTER_EN` 控制是否编译发射/接收代码。两者都开 = 收发一体，角色交给 xcfg 运行时决定；只开一个 = 编译期固定角色（省 Flash）。
+3. **收发角色机制**：`FUNC_DEVICE_EN / FUNC_ADAPTER_EN` 控制是否编译发射/接收代码，`config_extra.h` 把它们派生为 `WIRELESS_MIC_ROLE`（0=TX、1=RX、2=收发一体）。两者都开 = 收发一体，角色交给 xcfg 运行时决定；只开一个 = 编译期固定角色（省 Flash，注释原文「节省空间」）。两套 SDK 此机制一致，只是出厂 config 选值不同。
 
 4. **`FSIZE_256K`**：Flash 容量枚举，RX 有（适配 5706B 小容量封装），TX 没有（BT8910 系列最低 512K）。Flash 大小直接决定 `FLASH_CODE_SIZE`（程序区上限）与 FOTA 分区规划。
